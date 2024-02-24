@@ -1,0 +1,58 @@
+\chapter{Hypothesis Testing}
+\label{part2}
+
+In this part, we posited an inquiry: \textbf{Is it conceivable for people over the world to exceed a lifespan of 70 years?} To substantiate our hypothesis, we executed the ensuing examination, comprising these following procedural steps:
+\begin{itemize}
+    \item States null hypothesis and alternative hypothesis
+    \item Identify the level of test $\alpha$ (probability to make a \textit{type I error})
+    \item Test statistic
+    \item Rejection region
+    \item Calculating the test statistic from observation sample
+    \item Conclusion
+\end{itemize}
+\section{Identifying null hypothesis and alternative hypothesis}
+Since we are verifying if the average world's life expectancy is more than 70 years, the null hypothesis shall be "the average life expectancy of people on the world IS 70":
+\begin{center}
+    $H_0: \mu = \mu_0 = 70$
+
+    $H_1: \mu > \mu_0$
+\end{center}
+
+\section{Identify the level of test}
+In this test, we'll be using test level $\alpha = 5\%$. Hence, $c = z_\alpha = z_{0.05} = 1.64$
+\newpage
+\section{Test statistic}
+In this case, we'll be using the test:
+\begin{center}
+    {\fontsize{16}{20}\selectfont $T = \frac{(\overline{x} - \mu_0) \sqrt{n}}{s}$}
+\end{center}
+where n is the number of observations, $\overline{x}$ is the mean of Life Expectancy, and $s$ the standard deviation. These values has been calculated in the previous part:
+\begin{verbatim}
+    Observations:  195
+    LEX(mean, standard deviation):  72.39435897435897 7.319704279746025
+\end{verbatim}
+
+\section{Rejection region}
+Since the alternative hypothesis is upper-tailed, the rejection region will be:
+\begin{center}
+    {\fontsize{16}{20}\selectfont $\Delta = \{T > c\}$}
+\end{center}
+
+\section{Calculation}
+After some calculation:
+\begin{verbatim}
+    c = 1.64
+    u0 = 70
+    T = (lex_mean - u0) * np.sqrt(size) / lex_sd
+    print("T = ", T)
+    print("T > c: ", T > c)
+\end{verbatim}
+
+This is the result:
+\begin{verbatim}
+    T =  4.5678626063375765
+    T > c:  True
+\end{verbatim}
+
+\section{Conclusion}
+As T resides within the rejection region, the null hypothesis is deemed invalid, leading to the rejection of the assertion that the average lifespan of individuals worldwide is less than or equal to 70 years.
