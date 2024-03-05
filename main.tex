@@ -1,6 +1,3 @@
-% --------------------------
-% Document class
-% --------------------------
 \documentclass[
 A4paper,                % paper size A4
 twoside,                % onesite or twoside printing
@@ -11,88 +8,6 @@ headings=normal,        % size of headings
 titlepage=on            % own page for each title page
 ]{book}
 
-% **************************************************
-% THESIS details
-% **************************************************
-
-\input{thesisDetails}
-
-% **************************************************
-% Settings
-% **************************************************
-
-\input{settings}
-
-% **************************************************
-% Begin document
-% **************************************************
 \begin{document}
-
-% --------------------------
-% Cover and front matter
-% --------------------------
-% \frontmatter
-\pagestyle{empty}				    % no header nor footer
-% \input{frontmatter/1_cover}
-% \newpage
-
-\input{frontmatter/1_frontpage}
-\newpage
-
-
-
-% \pagenumbering{roman}			    % roman page numbering 
-\pagestyle{plain}				    % empty header, just page number in footer
-% \input{frontmatter/3_dedication}
-% \cleardoublepage
-
-% \input{frontmatter/4_acknowledgement_and_funding}   % dedication & cknowledgement (optional)
-% \cleardoublepage
-
-\input{frontmatter/2_abstract}  % abstract (in English)
-
-
-
-
-\selectlanguage{english}
-
-\setcounter{tocdepth}{3}		% define depth of toc
-\tableofcontents				% display table of contents
-
-\addcontentsline{toc}{section}{List of Figures}
-\listoffigures
-
-
-
-% \addcontentsline{toc}{section}{List of Tables}
-% \listoftables
-% \cleardoublepage
-% \clearpage
-
-
-% \input{frontmatter/6_acronyms}
-% \cleardoublepage
-
-% --------------------------
-% Main matter
-% --------------------------
-% \mainmatter
-% \pagenumbering{arabic}			% arabic page numbering
-% \setcounter{page}{1}			% set page counter
-\parskip=7pt                    % space after each paragraph
-\parindent=0pt                  % suppress indentation of paragraphs
-
-
-% Chapters
-\include{mainmatter/part1}
-\include{mainmatter/part2}
-\include{mainmatter/part3}
-\include{frontmatter/3_acknowledgements}
-\bibliographystyle{plain} % We choose the "plain" reference style
-\bibliography{references} % Entries are in the refs.bib file
-
-
-% **************************************************
-% End of document
-% **************************************************
+Good morning?
 \end{document}
