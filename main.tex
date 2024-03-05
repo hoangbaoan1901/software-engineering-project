@@ -1,5 +1,5 @@
 \documentclass[
-A4paper,                % paper size A4
+a4paper,                % paper size A4
 twoside,                % onesite or twoside printing
 openany,              % doublepage cleaning ends up right side
 chapterprefix=true,     % prefix for chapter marks
@@ -8,6 +8,8 @@ headings=normal,        % size of headings
 titlepage=on            % own page for each title page
 ]{book}
 
+\input{settings.tex}
 \begin{document}
-Good morning?
+\pagestyle{empty}
+\input{frontmatter/1_frontpage.tex}
 \end{document}
